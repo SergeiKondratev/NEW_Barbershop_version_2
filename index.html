@@ -17,7 +17,7 @@
 </head>
 <!-- Отображаемое тело страницы -->
 
-<body>
+<body class="inner-page">
     <header class="main-header">
         <nav class="main-navigation">
             <a class="main-header-logo">
@@ -31,7 +31,8 @@
                 <li><a href="contacts.html">Контакты</a></li>
             </ul>
             <ul class="user-navigation">
-                <li class="login-link">Вход</li>
+                <li class="login-link">
+                    <a href="login.html" class="login-link">Вход</a></li>
             </ul>
         </nav>
     </header>
@@ -55,21 +56,114 @@
                 </li>
             </ul>
         </section>
-        <section class="news">
-            <h2>Новости</h2>
-            <ul class="news-list">
-                <li class="news-item">
-                    <p>НАМ НАКОНЕЦ ЗАВЕЗЛИ ЯГЕРМАЙСТЕР! ТЕПЕРЬ ВЫ МОЖЕТЕ ПРОПУСТИТЬ СТАКАНЧИК ВО ВРЕМЯ СТРИЖКИ</p>
-                    <time datatime="2016-01-11">11 января</time>
-                </li>
-                <li class="news-item">
-                    <p>В НАШЕЙ КОМАНДЕ ПОПОЛНЕНИЕ, БОРИС «БРИТВА» СТРИГУНЕЦ, ОБЛАДАТЕЛЬ МНОЖЕСТВА ТИТУЛОВ И НАГРАД ПОПОЛНИЛ НАШИ СТРОЙНЫЕ РЯДЫ</p>
-                    <time datatime="2016-01-11">18 января</time>
-                </li>
-            </ul>
-            <a href="news.html" class="button">Все новости</a>
-        </section>
+        <div class="index-columns">
+            <section class="news">
+                <h2>Новости</h2>
+                <ul class="news-list">
+                    <li class="news-item">
+                        <p>НАМ НАКОНЕЦ ЗАВЕЗЛИ ЯГЕРМАЙСТЕР! ТЕПЕРЬ ВЫ МОЖЕТЕ ПРОПУСТИТЬ СТАКАНЧИК ВО ВРЕМЯ СТРИЖКИ</p>
+                        <time datatime="2016-01-11">11 января</time>
+                    </li>
+                    <li class="news-item">
+                        <p>В НАШЕЙ КОМАНДЕ ПОПОЛНЕНИЕ, БОРИС «БРИТВА» СТРИГУНЕЦ, ОБЛАДАТЕЛЬ МНОЖЕСТВА ТИТУЛОВ И НАГРАД ПОПОЛНИЛ НАШИ СТРОЙНЫЕ РЯДЫ</p>
+                        <time datatime="2016-01-11">18 января</time>
+                    </li>
+                </ul>
+                <a href="news.html" class="button">Все новости</a>
+            </section>
+            <section class="gallery">
+                <h2>Фотогалерея</h2>
+                <figure class="gallery-content">
+                    <a href="#">
+                        <img src="svg/layer_21_2568.png" alt="Интерьер" width="286" height="164">
+                    </a>
+                </figure>
+                <button type="botton" class="button gallery-button gallery-button-back">Назад</button>
+                <button type="botton" class="button gallery-button gallery-button-next">Вперед</button>
+            </section>
+        </div>
+        <div class="index-columns">
+            <section class="contacts">
+                <h2>Контактная информация</h2>
+                <p>БАРБЕРШОП «БОРОДИНСКИЙ» <br> АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, Б. КОНЮШЕННАЯ, Д. 19/8 <br> ТЕЛЕФОН: +7 (495) 666-02-66</p>
+                <p>ВРЕМЯ РАБОТЫ: <br> ПН — ПТ: С 10:00 ДО 22:00 <br> СБ — ВС: С 10:00 ДО 19:00</p>
+                <a href="map.html" class="button">Как проехать</a>
+                <a href="contacts.html" class="button">Обратная связь</a>
+            </section>
+            <section class="appointment">
+                <h2>Записаться</h2>
+                <p class="appointment-info">УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ</p>
+                <!-- Здесь будет форма -->
+                <form action="" class="appointment-form" method="post">
+                    <p class="appointment-item">
+                        <label for="appointment-date">Дата</label>
+                        <input type="text" id="appointment-date" name="date" value="" placeholder="08.08.912">
+                    </p>
+                    <p class="appointment-item">
+                        <label for="appointment-time">Время</label>
+                        <input type="text" id="appointment-time" name="time" value="" placeholder="11:22">
+                    </p>
+                    <p class="appointment-item">
+                        <label for="appointment-name">Ваше имя</label>
+                        <input type="text" id="appointment-name" name="name" value="" placeholder="Mectix">
+                    </p>
+                    <p class="appointment-item">
+                        <label for="appointment-phone">Телефон</label>
+                        <input type="tel" id="appointment-phone" name="phone" value="" placeholder="+7 (1) 220">
+                    </p>
+                    <button class="button" type="submit">Отправить</button>
+                </form>
+            </section>
+        </div>
     </main>
+    <footer class="main-footer container">
+        <p class="footer-contacts">
+            БАРБЕРШОП «БОРОДИНСКИЙ» <br> АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8 <br>
+            <a href="map.html">КАК НАС НАЙТИ?</a> <br> ТЕЛЕФОН: +7 (495) 666-02-66
+        </p>
+        <div class="footer-social">
+            <b>Давайте дружить!</b>
+            <ul>
+                <li><a href="#" class="social-button">Вконтакте</a></li>
+                <li><a href="#" class="social-button">Фейсбук</a></li>
+                <li><a href="#" class="social-button">Инстаграм</a></li>
+            </ul>
+        </div>
+        <p class="footer-copyright">
+            <b>Разработано</b>
+            <a href="#" class="button">justMagic</a>
+        </p>
+    </footer>
+    <section class="modal modal-login">
+        <h2>Личный кабинет</h2>
+        <p>Введите свой логин и пароль.</p>
+        <!-- Здесть будет форма -->
+        <form action="" class="login-form" method="post">
+            <p>
+                <label for="user-login" class="visually-hidden">Логин</label>
+                <input type="text" id="user-login" class="login-icon-user" name="login" placeholder="Логин">
+            </p>
+            <p>
+                <label for="user-password" class="visually-hidden">Логин</label>
+                <input type="password" id="user-password" class="login-icon-password" name="password" placeholder="Пароль">
+            </p>
+            <p class="login-password-info">
+                <label class="login-checkbox">
+                <input type="checkbox" name="remember" class="visually-hidden">
+                <span class="checkbox-indicator"></span>
+                Запомни меня</label>
+                <a href="#" class="restore">Я забыл пароль!</a>
+            </p>
+            <button class="button" type="submit">Войти</button>
+        </form>
+        <button class="modal-close" type="button">Закрыть</button>
+    </section>
+    <section class="modal modal-map">
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <p><img src="svg/map.png" width="780" height="560" alt="Офис компании по адресу: Г. САНКТ-ПЕТЕРБУРГ, Б. КОНЮШЕННАЯ, Д. 19/8">
+        </p>
+        <button class="modal-close" type="button">Закрыть</button>
+    </section>
 </body>
 
 </html>
